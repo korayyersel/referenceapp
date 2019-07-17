@@ -17,5 +17,13 @@
         "start": "node ./node_modules/@sap/cds/bin/cds.js serve odata/csn.json",
         "watch": "nodemon -w . -i node_modules/**,.git/** -e cds -x npm run build"
     },
-    "private": true
+    "private": true,
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "hana",
+                "model": "odata/csn.json"
+            }
+        }
+    }
 }
