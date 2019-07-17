@@ -10,6 +10,9 @@ modules:
       disk-quota: 256M
     requires:
       - name: referenceapp-db-hdi-container
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: sbb-i-mra-ups
   - name: referenceapp-srv
     type: nodejs
     path: srv
@@ -25,5 +28,12 @@ modules:
 resources:
   - name: referenceapp-db-hdi-container
     type: com.sap.xs.hdi-container
+    parameters:
+      config:
+        schema: REFERENCEDEMO
     properties:
       hdi-container-name: ${service-name}
+  - name: sbb-i-mra-ups
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: sbb-i-mra-ups

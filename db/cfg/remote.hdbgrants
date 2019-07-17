@@ -1,0 +1,51 @@
+{
+  "sbb-i-mra-ups": {
+     "object_owner": {
+       "global_object_privileges" : [
+        {
+          "name" : "RS_ABAPAdapter_ERP",
+          "type" : "REMOTE SOURCE",
+          "privileges_with_grant_option" : [ "CREATE VIRTUAL TABLE" ]
+        },
+        {
+          "name" : "RS_ABAPAdapter_HCM",
+          "type" : "REMOTE SOURCE",
+          "privileges_with_grant_option" : [ "CREATE VIRTUAL TABLE" ]
+        },
+        {
+          "name" : "RS_CAMELJDBC_MPM",
+          "type" : "REMOTE SOURCE",
+          "privileges_with_grant_option" : [ "CREATE VIRTUAL TABLE" ]
+        }
+      ],
+      "global_roles": [
+        {
+          "roles_with_admin_option" : ["AFL__SYS_AFL_AFLPAL_EXECUTE_WITH_GRANT_OPTION"]
+        }
+      ]
+    },
+     "application_user": {
+       "global_object_privileges" : [
+        {
+          "name" : "RS_ABAPAdapter_ERP",
+          "type" : "REMOTE SOURCE",
+          "privileges" : [ "CREATE VIRTUAL TABLE" ]
+        },{
+          "name" : "RS_ABAPAdapter_HCM",
+          "type" : "REMOTE SOURCE",
+          "privileges" : [ "CREATE VIRTUAL TABLE" ]
+        },
+        {
+          "name" : "RS_CAMELJDBC_MPM",
+          "type" : "REMOTE SOURCE",
+          "privileges" : [ "CREATE VIRTUAL TABLE" ]
+        }
+      ],
+      "global_roles": [
+        {
+          "roles" : ["AFL__SYS_AFL_AFLPAL_EXECUTE_WITH_GRANT_OPTION"]
+        }
+      ]
+     }
+  }
+}
