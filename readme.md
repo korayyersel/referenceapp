@@ -14,7 +14,7 @@ Following example implementations can be found here:
 ## 1) Auto-Increment ID
 ### Relavent Files
 - MY_BOOKSHOP_BOOKS.hdbcds
-### SQL Insert with Auto-INCREMENT:
+### SQL Insert with Auto-Increment ID:
 ```
 INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 	'third book',
