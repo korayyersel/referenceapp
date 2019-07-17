@@ -4,6 +4,7 @@ Following example implementations can be found here:
 
 - [x] Auto-Increment ID
 - [x] Virtual Tables (SDI)
+- [ ] Replication of Virtual Tables (SDI)
 - [x] OData Service (Read)
 - [ ] node.js Service (Write)
 - [ ] Authentication - xsuaa
@@ -13,7 +14,7 @@ Following example implementations can be found here:
 ## 1) Auto-Increment ID
 ### Relavent Files
 - MY_BOOKSHOP_BOOKS.hdbcds
-### SQL Insert with Auto-INCREMENT:
+### SQL Insert with Auto-Increment ID:
 ```
 INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 	'third book',
@@ -30,7 +31,7 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 - VT_PA0002.hdbvirtualtable
 - VT_ZPI_BI_MPM_FIN.hdbvirtualtable
 
-## 3) OData Service (Read)
+## 4) OData Service (Read)
 ### Relavent Files
 - CATALOGSERVICE_BOOKS.hdbcds (db)
 - csn.json (srv)
