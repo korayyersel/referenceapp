@@ -30,6 +30,32 @@
       },
       "$syntax": "projection"
     },
+    "CatalogService.Employess": {
+      "kind": "entity",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "Employess"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "firstname": {
+          "type": "cds.String"
+        },
+        "lastname": {
+          "type": "cds.String"
+        }
+      },
+      "$syntax": "projection"
+    },
     "my.bookshop.Books": {
       "kind": "entity",
       "elements": {
@@ -42,6 +68,21 @@
         },
         "stock": {
           "type": "cds.Integer"
+        }
+      }
+    },
+    "Employess": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "firstname": {
+          "type": "cds.String"
+        },
+        "lastname": {
+          "type": "cds.String"
         }
       }
     }
