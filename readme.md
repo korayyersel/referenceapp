@@ -2,7 +2,7 @@
 
 Following example implementations can be found here:
 
-- [x] [Auto-Increment ID](./#1-auto-increment-id)
+- [x] [Auto-Increment ID](../../#1-auto-increment-id)
 - [x] Virtual Tables (SDI)
 - [ ] Replication of Virtual Tables (SDI)
 - [x] OData Service (Read)
