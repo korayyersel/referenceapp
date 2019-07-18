@@ -5,8 +5,9 @@ Following example implementations can be found here:
 - [x] Auto-Increment ID
 - [x] Virtual Tables (SDI)
 - [ ] Replication of Virtual Tables (SDI)
-- [x] OData Service (Read)
-- [ ] node.js Service (Write)
+- [x] node.js OData Service (Read)
+- [ ] node.js REST Service (Write)
+- [ ] Java REST Service (Write)
 - [ ] Authentication (xsuaa)
 - [ ] Authorisation (AccessPolicy / cds)
 
