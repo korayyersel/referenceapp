@@ -6,8 +6,8 @@ Following example implementations can be found here:
 - [x] Virtual Tables (SDI)
 - [ ] Replication of Virtual Tables (SDI)
 - [x] node.js OData Service (Read)
-- [ ] node.js REST Service (Write)
-- [ ] Java REST Service (Write)
+- [x] node.js REST Service (Write - Import CSV)
+- [ ] Java REST Service (Write - Import CSV)
 - [ ] Authentication (xsuaa)
 - [ ] Authorisation (AccessPolicy / cds)
 
