@@ -41,9 +41,6 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 
 ## 5) node.js REST Service (Write - Import CSV)
 ### Relevant Files
-- CATALOGSERVICE_BOOKS.hdbcds (db)
-- csn.json (srv)
-- package.json (srv)
 - server.js (srv)
 ```javascript
 app.post("/csvImport/Books", upload.single("file"), function (req, res) {
