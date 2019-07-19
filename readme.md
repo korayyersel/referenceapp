@@ -13,7 +13,7 @@ Following example implementations can be found here:
 
 
 ## 1) Auto-Increment ID
-### Relavent Files
+### Relevant Files
 - MY_BOOKSHOP_BOOKS.hdbcds
 ### SQL Insert with Auto-Increment ID:
 ```sql
@@ -24,7 +24,7 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 ```
 
 ## 2) Virtual Tables (SDI)
-### Relavent Files
+### Relevant Files
 - User Provided Service from Cockpit
 - mta.yaml (ups resource)
 - remote.hdbgrants
@@ -32,8 +32,21 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 - VT_PA0002.hdbvirtualtable
 - VT_ZPI_BI_MPM_FIN.hdbvirtualtable
 
-## 4) OData Service (Read)
-### Relavent Files
+## 4) node.js OData Service (Read)
+### Relevant Files
 - CATALOGSERVICE_BOOKS.hdbcds (db)
 - csn.json (srv)
 - package.json (srv)
+- server.js (srv)
+
+## 5) node.js REST Service (Write - Import CSV)
+### Relevant Files
+- CATALOGSERVICE_BOOKS.hdbcds (db)
+- csn.json (srv)
+- package.json (srv)
+- server.js (srv)
+```javascript
+app.post("/csvImport/Books", upload.single("file"), function (req, res) {
+ ...
+}
+```
