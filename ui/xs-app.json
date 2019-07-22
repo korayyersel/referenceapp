@@ -2,11 +2,7 @@
 	"welcomeFile": "ui/index.html",
 	"authenticationMethod": "route",
 	"routes": [{
-		"source": "/catalog/Books",
-		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa"
-	},{
-		"source": "/catalog/Employees",
+		"source": "/catalog",
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa"
 	},{

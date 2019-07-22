@@ -30,14 +30,14 @@
       },
       "$syntax": "projection"
     },
-    "CatalogService.Employess": {
+    "CatalogService.Employees": {
       "kind": "entity",
       "@readonly": true,
       "query": {
         "SELECT": {
           "from": {
             "ref": [
-              "Employess"
+              "Employees"
             ]
           }
         }
@@ -71,7 +71,7 @@
         }
       }
     },
-    "Employess": {
+    "Employees": {
       "kind": "entity",
       "elements": {
         "ID": {
