@@ -51,17 +51,17 @@ app.post("/csvImport/Books", upload.single("file"), function (req, res) {
 }
 ```
 
-### Native JavaScript call example for UI5
+### Example csv for UI5
 ```csv
 title;stock
 Book 1;3782
 Book 2;646
 Book 3;4783
 ```
-
+### Native JavaScript call example for UI5
 ```javascript
 var data = new FormData();
-var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; 
+var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; // see above
 var blob = atob(fileBase64Binary);
 var file = new File([blob], "test.csv");
 data.append("file", file);
