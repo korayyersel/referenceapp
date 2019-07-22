@@ -66,8 +66,7 @@ var blob = atob(fileBase64Binary);
 var file = new File([blob], "test.csv");
 data.append("file", file);
 var xhr = new XMLHttpRequest();
-var base = "https://sbb-e1n1dev-i-0001-mra-mittelfristige-ressourcenplanung397008a7.cfapps.eu10.hana.ondemand.com";
-//var base = "https://q-perior-ag-dev-busappref-srv.cfapps.eu10.hana.ondemand.com";
+var base = [ui5appurl];
 xhr.open("POST", base + "/csvImport/Books");
 xhr.send(data);
 ```
