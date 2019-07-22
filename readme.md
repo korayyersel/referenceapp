@@ -61,7 +61,7 @@ Book 3;4783
 ### Native JavaScript call example for UI5
 ```javascript
 var data = new FormData();
-var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; // see above exanple csv
+var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; // see above example csv
 var blob = atob(fileBase64Binary);
 var file = new File([blob], "test.csv");
 data.append("file", file);
