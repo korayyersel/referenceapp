@@ -6,6 +6,11 @@
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa"
 	},{
+		"source": "/csvImport",
+		"destination": "referenceapp-api",
+		"authenticationType": "xsuaa",
+		"csrfProtection": false
+	},{
 		"source": "^/ui/(.*)$",
 		"target": "$1",
 		"localDir": "webapp",

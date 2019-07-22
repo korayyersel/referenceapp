@@ -8,11 +8,12 @@ Following example implementations can be found here:
 - [x] node.js OData Service (Read)
 - [x] node.js REST Service (Write - Import CSV)
 - [ ] Java REST Service (Write - Import CSV)
-
 - [x] Authentication (xsuaa)
 - [ ] Authorisation - API/Service (Scope Check)
 - [ ] Authorisation - Data (AccessPolicy / cds)
 
+##Known Issues:
+- [] csrfProtection temporarly switched off
 
 ## 1) Auto-Increment ID
 ### Relevant Files
@@ -51,11 +52,22 @@ app.post("/csvImport/Books", upload.single("file"), function (req, res) {
 ```
 
 ### Native JavaScript call example for UI5
+```csv
+title;stock
+Book 1;3782
+Book 2;646
+Book 3;4783
+```
+
 ```javascript
 var data = new FormData();
-data.append("file", "test.csv");
-
+var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; 
+var blob = atob(fileBase64Binary);
+var file = new File([blob], "test.csv");
+data.append("file", file);
 var xhr = new XMLHttpRequest();
-xhr.open("POST", "https://[ui5appurl]/csvImport/Books");
+var base = "https://sbb-e1n1dev-i-0001-mra-mittelfristige-ressourcenplanung397008a7.cfapps.eu10.hana.ondemand.com";
+//var base = "https://q-perior-ag-dev-busappref-srv.cfapps.eu10.hana.ondemand.com";
+xhr.open("POST", base + "/csvImport/Books");
 xhr.send(data);
 ```
