@@ -12,8 +12,8 @@ Following example implementations can be found here:
 - [ ] Authorisation - API/Service (Scope Check)
 - [ ] Authorisation - Data (AccessPolicy / cds)
 
-##Known Issues:
-- [] csrfProtection temporarly switched off
+## Known Issues:
+- [ ] csrfProtection temporarly switched off
 
 ## 1) Auto-Increment ID
 ### Relevant Files
