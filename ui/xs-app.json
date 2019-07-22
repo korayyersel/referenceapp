@@ -1,0 +1,18 @@
+{
+	"welcomeFile": "ui/index.html",
+	"authenticationMethod": "route",
+	"routes": [{
+		"source": "/catalog/Books",
+		"destination": "referenceapp-api",
+		"authenticationType": "xsuaa"
+	},{
+		"source": "/catalog/Employees",
+		"destination": "referenceapp-api",
+		"authenticationType": "xsuaa"
+	},{
+		"source": "^/ui/(.*)$",
+		"target": "$1",
+		"localDir": "webapp",
+		"authenticationType": "xsuaa"
+	}]
+}

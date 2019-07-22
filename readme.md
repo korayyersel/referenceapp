@@ -4,12 +4,14 @@ Following example implementations can be found here:
 
 - [x] Auto-Increment ID
 - [x] Virtual Tables (SDI)
-- [ ] Replication of Virtual Tables (SDI)
+- [ ] Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] node.js OData Service (Read)
 - [x] node.js REST Service (Write - Import CSV)
 - [ ] Java REST Service (Write - Import CSV)
-- [ ] Authentication (xsuaa)
-- [ ] Authorisation (AccessPolicy / cds)
+
+- [x] Authentication (xsuaa)
+- [ ] Authorisation - API/Service (Scope Check)
+- [ ] Authorisation - Data (AccessPolicy / cds)
 
 
 ## 1) Auto-Increment ID
@@ -46,4 +48,14 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 app.post("/csvImport/Books", upload.single("file"), function (req, res) {
  ...
 }
+```
+
+### Native JavaScript call example for UI5
+```javascript
+var data = new FormData();
+data.append("file", "test.csv");
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "https://[ui5appurl]/csvImport/Books");
+xhr.send(data);
 ```

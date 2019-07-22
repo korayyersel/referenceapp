@@ -15,7 +15,7 @@ var upload = multer({
 	dest: "tmp/csv/"
 });
 
-/*
+
 //Initialize Express App for XS UAA and HDBEXT Middleware
 passport.use("JWT", new xssec.JWTStrategy(xsenv.getServices({
 	uaa: {
@@ -23,7 +23,6 @@ passport.use("JWT", new xssec.JWTStrategy(xsenv.getServices({
 	}
 }).uaa));
 app.use(passport.initialize());
-*/
 
 var hanaOptions = xsenv.getServices({
 	hana: {
@@ -32,11 +31,9 @@ var hanaOptions = xsenv.getServices({
 });
 
 app.use(
-	/*
 	passport.authenticate("JWT", {
 		session: false
 	}),
-	*/
 	xsHDBConn.middleware(hanaOptions.hana)
 );
 
