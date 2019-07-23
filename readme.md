@@ -13,7 +13,7 @@ Following example implementations can be found here:
 - [ ] Authorisation - Data (AccessPolicy / cds)
 
 ## Known Issues:
-- [ ] csrfProtection temporarly switched off
+- none
 
 ## 1) Auto-Increment ID
 ### Relevant Files
@@ -59,6 +59,15 @@ Book 2;646
 Book 3;4783
 ```
 ### Native JavaScript call example for UI5
+- First fetch Token
+```javascript
+var xhr = new XMLHttpRequest();
+var url = [ui5appurl];
+xhr.open("GET", url);
+xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+xhr.send();
+```
+- Call import service with token
 ```javascript
 var data = new FormData();
 var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; // see above example csv
@@ -68,5 +77,6 @@ data.append("file", file);
 var xhr = new XMLHttpRequest();
 var base = [ui5appurl];
 xhr.open("POST", base + "/csvImport/Books");
+xhr.setRequestHeader("X-CSRF-Token", [token]); // take the token from the response of fetch token call
 xhr.send(data);
 ```

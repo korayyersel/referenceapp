@@ -8,8 +8,7 @@
 	},{
 		"source": "/csvImport",
 		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa",
-		"csrfProtection": false
+		"authenticationType": "xsuaa"
 	},{
 		"source": "^/ui/(.*)$",
 		"target": "$1",
