@@ -57,14 +57,14 @@ app.post("/csvImport/Books", upload.single("file"), function (req, res) {
 }
 ```
 
-### Example csv for UI5
+### Example csv for UI5 Upload
 ```csv
 title;stock
 Book 1;3782
 Book 2;646
 Book 3;4783
 ```
-### Native JavaScript call example for UI5
+### Native JavaScript call example for UI5 Upload
 - First fetch Token
 ```javascript
 var xhr = new XMLHttpRequest();
