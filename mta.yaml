@@ -26,6 +26,9 @@ modules:
     requires:
       - name: referenceapp-db-hdi-container
       - name: referenceapp-uaa
+      - name: referenceapp-jobscheduler
+    properties:
+      SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'
   - name: referenceapp-ui
     type: html5
     path: ui
@@ -56,6 +59,12 @@ resources:
       service-plan: application
       service: xsuaa
       path: ./xs-security.json  
+  - name: referenceapp-jobscheduler
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: jobscheduler
+      service-plan: standard
+      enable-xsuaa-support: true
   - name: sbb-i-mra-ups
     type: org.cloudfoundry.existing-service
     parameters:
