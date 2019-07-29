@@ -10,6 +10,10 @@
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa"
 	},{
+		"source": "/replicate",
+		"destination": "referenceapp-api",
+		"authenticationType": "xsuaa"
+	},{
 		"source": "^/ui/(.*)$",
 		"target": "$1",
 		"localDir": "webapp",
