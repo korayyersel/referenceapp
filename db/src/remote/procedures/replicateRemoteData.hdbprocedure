@@ -1,0 +1,12 @@
+PROCEDURE "replicateRemoteData"( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   --DELETE FROM REP_ZPI_BI_MPM_FIN;
+   --commit;
+   CALL FG_ZPI_BI_MPM_FIN_SP();
+END
