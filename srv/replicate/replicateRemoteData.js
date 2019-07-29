@@ -15,14 +15,14 @@ module.exports = function (app) {
 		hdbext.createConnection(hanaOptions.hana, (err, client) => {
 			if (err) {
 				console.error("ERROR: " + err.toString());
-				res.type("text/plain").status(500).send('ERROR: ${err.toString()}');
+				res.type("text/plain").status(500).send('ERROR: '+err.toString());
 				return;
 			}
 			// Load procedure (client, schemaName, procedureName, callback)
 			hdbext.loadProcedure(client, null, "replicateRemoteData", (err1, sp) => {
 				if (err1) {
 					console.error("ERROR: " + err1.toString());
-					res.type("text/plain").status(500).send('ERROR: ${err1.toString()}');
+					res.type("text/plain").status(500).send('ERROR: '+err1.toString());
 					return;
 				}
 				// Execute procedure (Input Params, callback(errors, Output [Scalar Params | Table Params])
@@ -31,7 +31,7 @@ module.exports = function (app) {
 
 					if (err2) {
 						console.log("ERROR: " + err2.toString());
-						res.type("text/plain").status(500).send('ERROR: ${err2.toString()}');
+						res.type("text/plain").status(500).send('ERROR: '+err2.toString());
 						return;
 					}
 					console.log("replicateRemoteData job ended...");
