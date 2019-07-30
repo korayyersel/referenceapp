@@ -5,7 +5,7 @@ Following example implementations can be found here:
 - [x] 1) Auto-Increment ID
 - [x] 2) Virtual Tables (SDI)
 - [x] 3) Job Scheduling
-- [ ] 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
+- [x] 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 5) node.js OData Service (Read)
 - [x] 6) node.js REST Service (Write - Import CSV)
 - [ ] 7) Java REST Service (Write - Import CSV)
@@ -40,6 +40,9 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 
 ## 3) Job Scheduling
 TODO
+
+## 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
+TODO 
 
 ## 5) node.js OData Service (Read)
 ### Relevant Files
