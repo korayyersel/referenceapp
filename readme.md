@@ -40,6 +40,7 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 
 ## 3) Job Scheduling
 TODO
+inkl. xs-security.json
 
 ## 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 TODO 
