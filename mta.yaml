@@ -45,6 +45,28 @@ modules:
           name: referenceapp-api
           url: '~{url}'
           forwardAuthToken: true
+     - name: referenceapp-java-api
+       group: destinations
+       properties:
+          name: referenceapp-java-api
+          url: '~{url}'
+          forwardAuthToken: true
+  - name: referenceapp-srv-java
+    type: java
+    path: srv-java
+    parameters:
+       memory: 1024M
+    provides:
+     - name: referenceapp-java-api
+       properties:
+          url: ${default-url}
+    requires:
+     - name: referenceapp-uaa
+     - name: referenceapp-db-hdi-container
+       properties:
+          JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
+             {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
+
 resources:
   - name: referenceapp-db-hdi-container
     type: com.sap.xs.hdi-container
