@@ -8,11 +8,8 @@
 	},{
 		"source": "/csvImport",
 		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa"
-	},{
-		"source": "/replicate",
-		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa"
+		"authenticationType": "xsuaa",
+		"scope": "$XSAPPNAME.CSVImport.Edit"
 	},{
 		"source": "^/ui/(.*)$",
 		"target": "$1",

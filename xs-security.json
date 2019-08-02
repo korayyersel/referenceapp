@@ -9,6 +9,10 @@
 		"name": "$XSAPPNAME.JobScheduler",
 		"description": "Scope for Job Scheduler",
 		"grant-as-authority-to-apps": ["jobscheduler"]
+	},
+	{
+		"name": "$XSAPPNAME.CSVImport.Edit",
+		"description": "Edit rights for CSV Import"
 	}],
 	"role-templates": [{
 		"name": "Token_Exchange",
@@ -16,5 +20,9 @@
 		"scope-references": [
 			"uaa.user"
 		]
+	},{
+		"name": "Administrator",
+		"description": "Role Template for Administrator",
+		"scope-references": ["$XSAPPNAME.CSVImport.Edit"]
 	}]
 }
