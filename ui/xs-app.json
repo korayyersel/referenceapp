@@ -6,6 +6,10 @@
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa"
 	},{
+		"source": "/hello",
+		"destination": "referenceapp-java-api",
+		"authenticationType": "xsuaa"
+	},{
 		"source": "/csvImport",
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa",
