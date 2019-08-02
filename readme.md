@@ -8,7 +8,7 @@ Following example implementations can be found here:
 - [x] 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 5) node.js OData Service (Read)
 - [x] 6) node.js REST Service (Write - Import CSV)
-- [ ] 7) Java REST Service (Write - Import CSV)
+- [x] 7) Java REST Service
 - [x] 8) Authentication (xsuaa)
 - [ ] 9) Authorisation - API/Service (Scope Check)
 - [ ] 10) Authorisation - Data (AccessPolicy / cds)
@@ -92,5 +92,8 @@ xhr.open("POST", base + "/csvImport/Books");
 xhr.setRequestHeader("X-CSRF-Token", [token]); // take the token from the response of fetch token call
 xhr.send(data);
 ```
+## 7) Java REST Service
+TODO
+
 ## 8) Authentication (xsuaa)
 TODO
