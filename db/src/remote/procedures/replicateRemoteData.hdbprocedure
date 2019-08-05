@@ -6,9 +6,7 @@ BEGIN
    /*************************************
        Write your procedure logic 
    *************************************/
-   --DELETE FROM REP_ZPI_BI_MPM_FIN;
-   --commit;
-   --CALL FG_ZPI_BI_MPM_FIN_SP();
-   select * from MY_BOOKSHOP_BOOKS;
-   select * from EMPLOYESS;
+   DELETE FROM REP_ZPI_BI_MPM_FIN;
+   commit;
+   CALL FG_ZPI_BI_MPM_FIN_SP();
 END

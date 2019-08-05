@@ -5,21 +5,6 @@ var express = require("express");
 var hdbext = require("@sap/hdbext");
 var xsenv = require("@sap/xsenv");
 var jobsc = require("@sap/jobs-client");
-var hanaOptions = xsenv.getServices({
-	hana: {
-		tag: "hana"
-	}
-});
-var jobOptions = xsenv.getServices({
-	jobs: {
-		tag: "jobscheduler"
-	}
-});
-var schedulerOptions = {
-	baseURL: jobOptions.jobs.url,
-	token: '',
-	timeout: 15000
-};
 
 module.exports = function (app) {
 	app.get("/replicate/replicateRemoteData", function (req, res) {
@@ -35,6 +20,17 @@ module.exports = function (app) {
 			data: ''
 		};
 
+		var jobOptions = xsenv.getServices({
+			jobs: {
+				tag: "jobscheduler"
+			}
+		});
+		var schedulerOptions = {
+			baseURL: jobOptions.jobs.url,
+			token: '',
+			timeout: 15000
+		};
+
 		var promise = prepareProcedure();
 		promise
 			.then(function ([client, sp]) {
@@ -45,11 +41,11 @@ module.exports = function (app) {
 						if (err2) {
 							var errMsg2 = "DB execute procedure error: " + JSON.stringify(err2);
 							console.log(errMsg2);
-							updateJob(schedulerUpdateRequest, false, errMsg2);
+							updateJob(schedulerUpdateRequest, schedulerOptions, jobOptions, false, errMsg2);
 							return;
 						}
 						console.log("replicateRemoteData job ended...");
-						updateJob(schedulerUpdateRequest, true, "job ended succesfully");
+						updateJob(schedulerUpdateRequest, schedulerOptions, jobOptions, true, "job ended succesfully");
 						return;
 					});
 				});
@@ -60,15 +56,20 @@ module.exports = function (app) {
 	});
 };
 
+//TODO optimize / simplify
 function messageJobStart(res) {
 	return new Promise(function (resolve, reject) {
-		res.type("text/plain").status(202).send('job started');
-		resolve();
+		res.type("text/plain").status(202).send('job started').then(resolve());
 	});
 }
 
 function prepareProcedure() {
 	return new Promise(function (resolve, reject) {
+		var hanaOptions = xsenv.getServices({
+			hana: {
+				tag: "hana"
+			}
+		});
 		hdbext.createConnection(hanaOptions.hana, (err, client) => {
 			if (err) {
 				var errMsg = "DB connection error: " + JSON.stringify(err);
@@ -88,7 +89,7 @@ function prepareProcedure() {
 	});
 };
 
-function getJobSchedulerAPIToken() {
+function getJobSchedulerAPIToken(jobOptions) {
 	return new Promise(function (resolve, reject) {
 		var https = require('https');
 		var querystring = require('querystring');
@@ -148,8 +149,8 @@ function getJobSchedulerAPIToken() {
 	});
 };
 
-function updateJob(schedulerUpdateRequest, success, message) {
-	var tokenPromise = getJobSchedulerAPIToken();
+function updateJob(schedulerUpdateRequest, schedulerOptions, jobOptions, success, message) {
+	var tokenPromise = getJobSchedulerAPIToken(jobOptions);
 	tokenPromise.then(function (token) {
 		var schedulerUpdateBody = {
 			success: success,
