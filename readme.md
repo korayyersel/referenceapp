@@ -100,3 +100,4 @@ TODO
 
 ## 9) Authorisation - API/Service (Scope Check)
 TODO
+inkl. jwt token tracing
