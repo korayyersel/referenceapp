@@ -10,7 +10,7 @@ Following example implementations can be found here:
 - [x] 6) node.js REST Service (Write - Import CSV)
 - [x] 7) Java REST Service
 - [x] 8) Authentication (xsuaa)
-- [ ] 9) Authorisation - API/Service (Scope Check)
+- [x] 9) Authorisation - API/Service (Scope Check)
 - [ ] 10) Authorisation - Data (AccessPolicy / cds)
 
 
