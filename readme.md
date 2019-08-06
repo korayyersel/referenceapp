@@ -97,3 +97,6 @@ TODO
 
 ## 8) Authentication (xsuaa)
 TODO
+
+## 9) Authorisation - API/Service (Scope Check)
+TODO
