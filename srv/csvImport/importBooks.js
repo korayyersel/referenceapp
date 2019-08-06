@@ -8,7 +8,7 @@ var upload = multer({
 
 module.exports = function (app) {
 	app.post("/csvImport/Books", upload.single("file"), function (req, res) {
-		if (req.authInfo.checkScope("$XSAPPNAME.CSVImport.Edit")) {
+		if (!req.authInfo.checkScope("$XSAPPNAME.CSVImport.Edit")) {
 			res.type("text/plain").status(403).send("Forbidden");
 		}
 		console.log("Called '/csvImport/Books'");

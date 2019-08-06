@@ -13,6 +13,10 @@
 	{
 		"name": "$XSAPPNAME.CSVImport.Edit",
 		"description": "Edit rights for CSV Import"
+	},
+	{
+		"name": "$XSAPPNAME.ODataCatalog.Test",
+		"description": "ODataCatalog Test"
 	}],
 	"role-templates": [{
 		"name": "Token_Exchange",
@@ -23,6 +27,6 @@
 	},{
 		"name": "Administrator",
 		"description": "Role Template for Administrator",
-		"scope-references": ["$XSAPPNAME.CSVImport.Edit"]
+		"scope-references": ["$XSAPPNAME.CSVImport.Edit","$XSAPPNAME.ODataCatalog.Test"]
 	}]
 }
