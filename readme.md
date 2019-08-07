@@ -40,9 +40,9 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 
 ## 3) Job Scheduling
 TODO
-inkl. xs-security.json
+incl. xs-security.json
 To configure XSUAA support, please update your service instance from SAP Cloud Platform Cockpit or using the command (cf update-service referenceapp-jobscheduler -c '{"enable-xsuaa-support": true }') and restage the application bound to this service instance.
-
+incl. Job Creation per API
 ## 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 TODO 
 
@@ -100,4 +100,4 @@ TODO
 
 ## 9) Authorisation - API/Service (Scope Check)
 TODO
-inkl. jwt token tracing
+incl. jwt token tracing
