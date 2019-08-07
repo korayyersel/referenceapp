@@ -15,6 +15,10 @@
 		"description": "Edit rights for CSV Import"
 	},
 	{
+		"name": "$XSAPPNAME.JobManager.Create",
+		"description": "Job Manager - Create Jobs"
+	},
+	{
 		"name": "$XSAPPNAME.ODataCatalog.Test",
 		"description": "ODataCatalog Test"
 	}],
@@ -27,6 +31,6 @@
 	},{
 		"name": "Administrator",
 		"description": "Role Template for Administrator",
-		"scope-references": ["$XSAPPNAME.CSVImport.Edit","$XSAPPNAME.ODataCatalog.Test"]
+		"scope-references": ["$XSAPPNAME.CSVImport.Edit","$XSAPPNAME.ODataCatalog.Test","$XSAPPNAME.JobManager.Create"]
 	}]
 }
