@@ -30,6 +30,21 @@ app.use(
 	xsHDBConn.middleware(hanaOptions.hana)
 );
 
+// token tracing 
+app.get("/auth/:type", function (req, res) {
+    console.log("Called '/auth'");
+    var type = req.params.type;
+
+    if (type === "token") {
+        var jwt = require('jsonwebtoken');
+        var token = req.authInfo.token;
+        var decoded = jwt.decode(token);
+        res.send(("decoded token [" + JSON.stringify(decoded) + "]"));
+    } else {
+        res.json(req.authInfo);
+    }
+});
+
 var cds = require("@sap/cds");
 cds.connect();
 cds.serve("odata/csn.json").in(app);

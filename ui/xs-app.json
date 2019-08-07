@@ -1,28 +1,39 @@
 {
 	"welcomeFile": "ui/index.html",
 	"authenticationMethod": "route",
-	"routes": [{
-		"source": "/catalog",
-		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa"
-	},{
-		"source": "/hello",
-		"destination": "referenceapp-java-api",
-		"authenticationType": "xsuaa"
-	},{
-		"source": "/jobs/create",
-		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa",
-		"scope": "$XSAPPNAME.JobManager.Create"
-	},{
-		"source": "/csvImport",
-		"destination": "referenceapp-api",
-		"authenticationType": "xsuaa",
-		"scope": "$XSAPPNAME.CSVImport.Edit"
-	},{
-		"source": "^/ui/(.*)$",
-		"target": "$1",
-		"localDir": "webapp",
-		"authenticationType": "xsuaa"
-	}]
+  "routes": [
+    {
+      "source": "/catalog",
+      "destination": "referenceapp-api",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "/hello",
+      "destination": "referenceapp-java-api",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "/jobs/create",
+      "destination": "referenceapp-api",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.JobManager.Create"
+    },
+    {
+      "source": "/csvImport",
+      "destination": "referenceapp-api",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.CSVImport.Edit"
+    },
+    {
+      "source": "/auth",
+      "destination": "referenceapp-api",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/ui/(.*)$",
+      "target": "$1",
+      "localDir": "webapp",
+      "authenticationType": "xsuaa"
+    }
+  ]
 }
