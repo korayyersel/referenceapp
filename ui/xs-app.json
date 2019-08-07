@@ -10,6 +10,11 @@
 		"destination": "referenceapp-java-api",
 		"authenticationType": "xsuaa"
 	},{
+		"source": "/jobs/create",
+		"destination": "referenceapp-api",
+		"authenticationType": "xsuaa",
+		"scope": "$XSAPPNAME.JobManager.Create"
+	},{
 		"source": "/csvImport",
 		"destination": "referenceapp-api",
 		"authenticationType": "xsuaa",
