@@ -93,6 +93,47 @@ xhr.open("POST", base + "/csvImport/Books");
 xhr.setRequestHeader("X-CSRF-Token", [token]); // take the token from the response of fetch token call
 xhr.send(data);
 ```
+- Both calls integrated in one snipplet
+```javascript
+// JavaScript source code
+var xhr = new XMLHttpRequest();
+var url = [ui5appurl];
+
+xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === 4) {
+        var headers = this.getAllResponseHeaders();
+        // Convert the header string into an array of individual headers
+        var arr = headers.trim().split(/[\r\n]+/);
+        // Create a map of header names to values
+        var headerMap = {};
+        arr.forEach(function (line) {
+            var parts = line.split(': ');
+            var header = parts.shift();
+            var value = parts.join(': ');
+            headerMap[header] = value;
+        });
+        var token = headerMap["x-csrf-token"];
+        if (token) {
+            var data = new FormData();
+            var fileBase64Binary = "dGl0bGU7c3RvY2sNCkJvb2sgMTszNzgyDQpCb29rIDI7NjQ2DQpCb29rIDM7NDc4Mw=="; // see above example csv
+            var blob = atob(fileBase64Binary);
+            var file = new File([blob], "test.csv");
+            data.append("file", file);
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open("POST", url + "/csvImport/Books");
+            xhr2.setRequestHeader("X-CSRF-Token", token); // take the token from the response of fetch token call
+            xhr2.send(data);
+        } else {
+            console.log("can't take token");
+        }
+    }
+});
+
+xhr.open("GET", url);
+xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+xhr.send();
+```
+
 ## 8) Java REST Service
 TODO
 
