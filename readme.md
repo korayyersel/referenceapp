@@ -4,7 +4,7 @@ Following example implementations can be found here:
 
 - [x] 1) Auto-Increment ID
 - [x] 2) Virtual Tables (SDI)
-- [ ] 3) CSV Table Data
+- [x] 3) CSV Table Data
 - [x] 4) Job Scheduling
 - [x] 5) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 6) node.js OData Service (Read)
@@ -39,6 +39,12 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 - VT_ZPI_BI_MPM_FIN.hdbvirtualtable
 - VT_PA0002.hdbvirtualtable
 - VT_ZPI_BI_MPM_FIN.hdbvirtualtable
+
+## 3) CSV Table Data
+### Relevant Files
+- DVD.hdbcds
+- DVD_Data.csv
+- DVD_Data.hdbtabledata
 
 ## 4) Job Scheduling
 TODO

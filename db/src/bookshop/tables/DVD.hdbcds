@@ -1,0 +1,5 @@
+entity DVD {
+  key ID : Integer;
+  TITLE : String(40);
+  RELEASEYEAR : Integer;
+};
