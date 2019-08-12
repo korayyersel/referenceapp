@@ -4,7 +4,7 @@ Following example implementations can be found here:
 
 - [x] 1) Auto-Increment ID
 - [x] 2) Virtual Tables (SDI)
-- [ ] 3) 
+- [ ] 3) CSV Table Data
 - [x] 4) Job Scheduling
 - [x] 5) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 6) node.js OData Service (Read)
@@ -40,22 +40,22 @@ INSERT INTO "REFERENCEDEMO"."MY_BOOKSHOP_BOOKS" (TITLE, STOCK) VALUES(
 - VT_PA0002.hdbvirtualtable
 - VT_ZPI_BI_MPM_FIN.hdbvirtualtable
 
-## 3) Job Scheduling
+## 4) Job Scheduling
 TODO
 incl. xs-security.json
 To configure XSUAA support, please update your service instance from SAP Cloud Platform Cockpit or using the command (cf update-service referenceapp-jobscheduler -c '{"enable-xsuaa-support": true }') and restage the application bound to this service instance.
 incl. Job Creation per API
-## 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
+## 5) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 TODO 
 
-## 5) node.js OData Service (Read)
+## 6) node.js OData Service (Read)
 ### Relevant Files
 - CATALOGSERVICE_BOOKS.hdbcds (db)
 - csn.json (srv)
 - package.json (srv)
 - server.js (srv)
 
-## 7) node.js REST Service (Write - Import CSV)
+## 8) node.js REST Service (Write - Import CSV)
 ### Relevant Files
 TODO fix relevant files
 - server.js (srv)
@@ -135,12 +135,12 @@ xhr.setRequestHeader("X-CSRF-Token", "Fetch");
 xhr.send();
 ```
 
-## 8) Java REST Service
+## 9) Java REST Service
 TODO
 
-## 9) Authentication (xsuaa)
+## 10) Authentication (xsuaa)
 TODO
 
-## 10) Authorisation - API/Service (Scope Check)
+## 11) Authorisation - API/Service (Scope Check)
 TODO
 incl. jwt token tracing
