@@ -7,11 +7,12 @@ Following example implementations can be found here:
 - [x] 3) Job Scheduling
 - [x] 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 5) node.js OData Service (Read)
-- [x] 6) node.js REST Service (Write - Import CSV)
-- [x] 7) Java REST Service
-- [x] 8) Authentication (xsuaa)
-- [x] 9) Authorisation - API/Service (Scope Check)
-- [ ] 10) Authorisation - Data (AccessPolicy / cds)
+- [ ] 6) node.js OData Service (CRUD incl. code override)
+- [x] 7) node.js REST Service (Write - Import CSV)
+- [x] 8) Java REST Service
+- [x] 9) Authentication (xsuaa)
+- [x] 10) Authorisation - API/Service (Scope Check)
+- [ ] 11) Authorisation - Data (AccessPolicy / cds)
 
 
 ## Known Issues:
@@ -53,7 +54,7 @@ TODO
 - package.json (srv)
 - server.js (srv)
 
-## 6) node.js REST Service (Write - Import CSV)
+## 7) node.js REST Service (Write - Import CSV)
 ### Relevant Files
 TODO fix relevant files
 - server.js (srv)
@@ -92,12 +93,12 @@ xhr.open("POST", base + "/csvImport/Books");
 xhr.setRequestHeader("X-CSRF-Token", [token]); // take the token from the response of fetch token call
 xhr.send(data);
 ```
-## 7) Java REST Service
+## 8) Java REST Service
 TODO
 
-## 8) Authentication (xsuaa)
+## 9) Authentication (xsuaa)
 TODO
 
-## 9) Authorisation - API/Service (Scope Check)
+## 10) Authorisation - API/Service (Scope Check)
 TODO
 incl. jwt token tracing
