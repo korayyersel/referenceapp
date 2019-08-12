@@ -8,7 +8,7 @@ Following example implementations can be found here:
 - [x] 4) Job Scheduling
 - [x] 5) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
 - [x] 6) node.js OData Service (Read)
-- [ ] 7) node.js OData Service (CRUD incl. code override)
+- [x] 7) node.js OData Service (CRUD incl. code override)
 - [x] 8) node.js REST Service (Write - Import CSV)
 - [x] 9) Java REST Service
 - [x] 10) Authentication (xsuaa)
@@ -60,6 +60,12 @@ TODO
 - csn.json (srv)
 - package.json (srv)
 - server.js (srv)
+
+## 7) node.js OData Service (CRUD incl. code override)
+### Relevant Files
+- CATALOGSERVICE_DVD.hdbcds (db)
+- lib\odatahandlers\index.js (srv)
+- server.js (srv) > ```.with(require("./lib/odatahandlers"))```
 
 ## 8) node.js REST Service (Write - Import CSV)
 ### Relevant Files
