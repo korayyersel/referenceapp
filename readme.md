@@ -68,6 +68,8 @@ TODO
 - lib\odatahandlers\index.js (srv)
 - server.js (srv) > ```.with(require("./lib/odatahandlers"))```
 
+TODO OData "create" javascript code
+
 ## 8) node.js REST Service (Write - Import CSV)
 ### Relevant Files
 TODO fix relevant files
