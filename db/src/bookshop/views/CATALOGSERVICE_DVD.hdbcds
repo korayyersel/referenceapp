@@ -1,0 +1,7 @@
+using DVD as DVD;
+
+view CATALOGSERVICE_DVD as select from DVD as DVD {
+  key DVD.ID as ID,
+  DVD.TITLE,
+  DVD.RELEASEYEAR
+};

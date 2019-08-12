@@ -56,6 +56,31 @@
       },
       "$syntax": "projection"
     },
+    "CatalogService.DVD": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "DVD"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "releaseyear": {
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
     "my.bookshop.Books": {
       "kind": "entity",
       "elements": {
@@ -83,6 +108,21 @@
         },
         "lastname": {
           "type": "cds.String"
+        }
+      }
+    },
+    "DVD": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "releaseyear": {
+          "type": "cds.Integer"
         }
       }
     }
