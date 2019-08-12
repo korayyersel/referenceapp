@@ -64,6 +64,7 @@ TODO
 ## 7) node.js OData Service (CRUD incl. code override)
 ### Relevant Files
 - CATALOGSERVICE_DVD.hdbcds (db)
+- csn.json (srv)
 - lib\odatahandlers\index.js (srv)
 - server.js (srv) > ```.with(require("./lib/odatahandlers"))```
 
