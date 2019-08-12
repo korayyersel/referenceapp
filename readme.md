@@ -4,15 +4,16 @@ Following example implementations can be found here:
 
 - [x] 1) Auto-Increment ID
 - [x] 2) Virtual Tables (SDI)
-- [x] 3) Job Scheduling
-- [x] 4) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
-- [x] 5) node.js OData Service (Read)
-- [ ] 6) node.js OData Service (CRUD incl. code override)
-- [x] 7) node.js REST Service (Write - Import CSV)
-- [x] 8) Java REST Service
-- [x] 9) Authentication (xsuaa)
-- [x] 10) Authorisation - API/Service (Scope Check)
-- [ ] 11) Authorisation - Data (AccessPolicy / cds)
+- [ ] 3) 
+- [x] 4) Job Scheduling
+- [x] 5) Replication of Virtual Tables (flowgraph, db procedure, job scheduler)
+- [x] 6) node.js OData Service (Read)
+- [ ] 7) node.js OData Service (CRUD incl. code override)
+- [x] 8) node.js REST Service (Write - Import CSV)
+- [x] 9) Java REST Service
+- [x] 10) Authentication (xsuaa)
+- [x] 11) Authorisation - API/Service (Scope Check)
+- [ ] 12) Authorisation - Data (AccessPolicy / cds)
 
 
 ## Known Issues:
