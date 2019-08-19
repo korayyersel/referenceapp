@@ -62,6 +62,7 @@ cds.serve("odata/csn.json", {
 require("./csvImport/importBooks")(app);
 require("./replicate/replicateRemoteData")(app);
 require("./jobManagement/jobManager")(app);
+require("./callJavaService/index")(app);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {

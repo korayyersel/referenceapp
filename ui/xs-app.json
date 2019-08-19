@@ -13,6 +13,11 @@
       "authenticationType": "xsuaa"
     },
     {
+      "source": "/callJavaService",
+      "destination": "referenceapp-api",
+      "authenticationType": "xsuaa"
+    },
+    {
       "source": "/jobs/create",
       "destination": "referenceapp-api",
       "authenticationType": "xsuaa",
