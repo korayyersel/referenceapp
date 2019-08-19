@@ -1,23 +1,28 @@
 "use strict";
 
 var https = require("https");
-var xsenv = require("@sap/xsenv");
 
 module.exports = function (app) {
 	app.get("/callJavaService", function (req, res) {
-		// TODO use here destination / user provided service > not a static URL
+        var destinations = JSON.parse(process.env.destinations);        
+        var filteredDestinations = destinations.filter(function (obj) {
+            return obj.name === "referenceapp-java-api";
+        });
+        if (!filteredDestinations) {
+            res.status(500).send("Destination is not set");
+            return;
+        }
+        var javaDestination = filteredDestinations[0];        
+        var javaDestinationHost = javaDestination.url.toString().replace("https://", "").replace("http://", "");
 		var options = {
-			host: "sbb-e1n1dev-i-0001-mra-mittelfristige-ressourcenplanung-e27eff5.cfapps.eu10.hana.ondemand.com",
+            host: javaDestinationHost,
 			port: 443,
 			method: 'GET',
 			path: '/hello',
 			headers: {
 				authorization: req.headers.authorization
 			}
-		};
-		
-		var userProvided = xsenv.getServices("user-provided");
-		console.dir(userProvided);
+		};           
 		
 		// request object
 		var req1 = https.request(options, function (res1) {
